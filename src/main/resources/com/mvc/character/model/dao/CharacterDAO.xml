@@ -38,19 +38,19 @@
     <update id="updateCharacter" parameterType="CharacterDTO">
         UPDATE MEMBER_INFO
         <set>
-            <if test="ageInfo != null and ageInfo neq 'SKIP'">
+            <if test="ageInfo != null and ageInfo">
                 ,AGE_INFO = #{ageInfo}
             </if>
-            <if test="statureInfo != null and statureInfo neq 'SKIP'">
+            <if test="statureInfo != null and statureInfo">
                 ,STATURE_INFO = #{statureInfo}
             </if>
-            <if test="jobInfo != null and jobInfo neq 'SKIP'">
+            <if test="jobInfo != null and jobInfo">
                 ,JOB_INFO = #{jobInfo}
             </if>
-            <if test="positionInfo != null and positionInfo neq 'SKIP'">
+            <if test="positionInfo != null and positionInfo">
                 ,POSITION_INFO = #{positionInfo}
             </if>
-            <if test="genderStatus != null and genderStatus neq 'SKIP'">
+            <if test="genderStatus != null and genderStatus">
                 ,GENDER_STATUS = #{genderStatus}
             </if>
         </set>

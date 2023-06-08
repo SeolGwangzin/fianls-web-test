@@ -11,7 +11,7 @@
         <input type="text" name="characterCode" id="characterCode">
         <button type="submit">조회하기</button>
     </form>
-    <br><br>
+    <br>
 
     <h3>CHARACTER 테이블에서 캐릭터 전체 정보 조회 </h3>
     <button onclick="location.href='${pageContext.servletContext.contextPath}/character/list'">캐릭터정보 전체 조회하기</button>
@@ -69,7 +69,7 @@
         <br>
         <button type="submit">정보변경</button>
     </form>
-    <br><br>
+    <br>
 
     <h3>CHARACTER 테이블에서 캐릭터 정보 삭제 (캐릭터 코드를 입력 받아 코드와 일치하는 행 삭제) </h3>
     <form action="${ pageContext.servletContext.contextPath }/character/delete" method="post">
