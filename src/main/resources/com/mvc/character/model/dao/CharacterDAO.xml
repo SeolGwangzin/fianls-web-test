@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mvc.character.model.dao.CharacterDAO">
+
+    <resultMap type="CharacterDTO" id="characterResultMap">
+        <id property="characterCode" column="CHARACTER_CODE"/>
+        <result property="characterName" column="CHARACTER_NAME"/>
+        <result property="ageInfo" column="AGE_INFO"/>
+        <result property="statureInfo" column="STATURE_INFO"/>
+        <result property="jobInfo" column="JOB_INFO"/>
+        <result property="positionInfo" column="POSITION_INFO"/>
+        <result property="genderStatus" column="GENDER_STATUS"/>
+    </resultMap>
+
+    <select id="selectAllCharacterList" resultMap="characterResultMap">
+        SELECT *
+        FROM MEMBER_INFO
+        ORDER BY CHARACTER_CODE
+    </select>
+
+    <select id="selectCharacterById" parameterType="SearchCondition" resultMap="characterResultMap">
+        SELECT *
+        FROM MEMBER_INFO
+        WHERE CHARACTER_CODE = #{characterCode}
+        ORDER BY CHARACTER_CODE ASC
+    </select>
+
+    <insert id="insertCharacter" parameterType="CharacterDTO">
+        INSERT INTO MEMBER_INFO (CHARACTER_NAME, AGE_INFO, STATURE_INFO, JOB_INFO, POSITION_INFO, GENDER_STATUS)
+        VALUES( #{characterName}, #{ageInfo}, #{statureInfo} , #{jobInfo}, #{positionInfo}, #{genderStatus})
+    </insert>
+
+    <select id="selectNewChaCode" resultType="String">
+        SELECT LPAD(MAX(CHARACTER_CODE) + 1, 3, '0') AS CHARACTER_CODE
+        FROM MEMBER_INFO;
+    </select>
+
+    <update id="updateCharacter" parameterType="CharacterDTO">
+        UPDATE MEMBER_INFO
+        <set>
+            <if test="ageInfo != null and ageInfo neq 'SKIP'">
+                ,AGE_INFO = #{ageInfo}
+            </if>
+            <if test="statureInfo != null and statureInfo neq 'SKIP'">
+                ,STATURE_INFO = #{statureInfo}
+            </if>
+            <if test="jobInfo != null and jobInfo neq 'SKIP'">
+                ,JOB_INFO = #{jobInfo}
+            </if>
+            <if test="positionInfo != null and positionInfo neq 'SKIP'">
+                ,POSITION_INFO = #{positionInfo}
+            </if>
+            <if test="genderStatus != null and genderStatus neq 'SKIP'">
+                ,GENDER_STATUS = #{genderStatus}
+            </if>
+        </set>
+        WHERE CHARACTER_CODE = #{characterCode}
+    </update>
+
+    <delete id="deleteCharacter" parameterType="hashMap">
+        DELETE
+        FROM MEMBER_INFO
+        WHERE CHARACTER_CODE = #{characterCode}
+    </delete>
+
+</mapper>

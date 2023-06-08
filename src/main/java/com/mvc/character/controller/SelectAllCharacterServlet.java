@@ -1,7 +1,7 @@
-package com.mvc.employee.controller;
+package com.mvc.character.controller;
 
-import com.mvc.employee.model.dto.EmployeeDTO;
-import com.mvc.employee.model.service.EmployeeService;
+import com.mvc.character.model.dto.CharacterDTO;
+import com.mvc.character.model.service.CharacterService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,23 +11,23 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/employee/list")
-public class SelectAllEmpServlet extends HttpServlet {
+@WebServlet("/character/list")
+public class SelectAllCharacterServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        EmployeeService empService = new EmployeeService();
-        List<EmployeeDTO> empList = empService.selectAllEmp();
+        CharacterService chaService = new CharacterService();
+        List<CharacterDTO> chaList = chaService.selectAllCharacter();
 
-        for(EmployeeDTO emp : empList) {
-            System.out.println(emp);
+        for(CharacterDTO cha : chaList) {
+            System.out.println(cha);
         }
 
         /* 조회 결과 성공 여부에 따른 뷰 결정 */
         String path = "";
-        if(empList != null) {
-            path = "/WEB-INF/views/employee/employeeList.jsp";
-            request.setAttribute("empList", empList);
+        if(chaList != null) {
+            path = "/WEB-INF/views/character/characterList.jsp";
+            request.setAttribute("chaList", chaList);
         } else {
             path = "/WEB-INF/common/errorPage.jsp";
             request.setAttribute("message", "직원 목록 조회 실패!");

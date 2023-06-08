@@ -4,6 +4,6 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Welcome to MVC land!</h1>
+    <h1>Welcome to CHARACTER land!</h1><br>
 </body>
 </html>

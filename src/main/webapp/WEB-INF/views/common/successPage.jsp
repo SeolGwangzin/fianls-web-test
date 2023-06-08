@@ -12,17 +12,17 @@
       let movePath = '';
 
       switch(successCode) {
-        case 'insertEmp' :
-          successMessage = '신규 직원 등록 성공!';
-          movePath = '${pageContext.servletContext.contextPath}/employee/list';
+        case 'insertCha' :
+          successMessage = '신규 캐릭터 등록 성공!';
+          movePath = '${pageContext.servletContext.contextPath}/character/list';
           break;
-        case 'updateEmp' :
-          successMessage = '직원 정보 수정 성공!';
-          movePath = '${pageContext.servletContext.contextPath}/employee/list';
+        case 'updateCha' :
+          successMessage = '캐릭터 정보 수정 성공!';
+          movePath = '${pageContext.servletContext.contextPath}/character/list';
           break;
-        case 'deleteEmp' :
-          successMessage = '직원 정보 삭제 성공!';
-          movePath = '${pageContext.servletContext.contextPath}/employee/list';
+        case 'deleteCha' :
+          successMessage = '캐릭터 정보 삭제 성공!';
+          movePath = '${pageContext.servletContext.contextPath}/character/list';
           break;
       }
 

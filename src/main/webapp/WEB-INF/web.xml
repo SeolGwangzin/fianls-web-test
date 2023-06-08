@@ -9,6 +9,6 @@
     </context-param>
     <context-param>
         <param-name>mapper-location</param-name>
-        <param-value>/WEB-INF/mapper/</param-value>
+        <param-value>/com/mvc/charater/model/dao/CharacterDAO</param-value>
     </context-param>
 </web-app>
