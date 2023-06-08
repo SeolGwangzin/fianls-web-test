@@ -1,4 +1,4 @@
-<h1>기능 구현</h1>
+<h1>추가 기능 구현</h1>
 <ol>
   <li style='list-style-type: lower-alpha'> Dynamic SQL 활용  :  resources/com/mvc/character/model/dao/CharacterDAO.xml에 사용</li>
   <li style='list-style-type: lower-alpha'> ServletListener를 활용  :  com/mvc/character/RequestListner/RequestListener.class에 존재</li>
