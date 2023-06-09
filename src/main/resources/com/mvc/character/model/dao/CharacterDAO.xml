@@ -50,7 +50,7 @@
             <if test="jobInfo != null and jobInfo">
                 ,JOB_INFO = #{jobInfo}
             </if>
-            <if test="positionInfo != null and positionCode">
+            <if test="positionCode != null and positionCode">
                 ,POSITION_CODE = #{positionCode}
             </if>
             <if test="genderStatus != null and genderStatus">

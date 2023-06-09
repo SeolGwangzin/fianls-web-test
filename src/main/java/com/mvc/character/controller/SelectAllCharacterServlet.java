@@ -20,10 +20,9 @@ public class SelectAllCharacterServlet extends HttpServlet {
         List<CharacterDTO> chaList = chaService.selectAllCharacter();
 
         for(CharacterDTO cha : chaList) {
-            System.out.println(cha);
+            System.out.println("asdkjasfkjahfasfj" + cha +"hgfhggfhgfgh");
         }
 
-        /* 조회 결과 성공 여부에 따른 뷰 결정 */
         String path = "";
         if(chaList != null) {
             path = "/WEB-INF/views/character/characterList.jsp";

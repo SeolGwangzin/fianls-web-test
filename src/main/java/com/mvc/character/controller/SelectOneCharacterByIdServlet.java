@@ -15,18 +15,15 @@ public class SelectOneCharacterByIdServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        /* 전달한 파라미터 꺼내기 */
         String chaId = request.getParameter("characterCode");
 
         System.out.println("chaId : " + chaId);
 
-        /* 사번을 이용해 사원 정보를 조회하는 비지니스 로직 호출 */
         CharacterService chaService = new CharacterService();
         CharacterDTO chaDTO = chaService.selectOneChaById(chaId);
 
         System.out.println("selectedEmp : " + chaDTO);
 
-        /* 비지니스 로직 실행 결과에 따라 뷰 연결 */
         String path = "";
         if(chaDTO != null) {
             path = "/WEB-INF/views/character/showCharacterInfo.jsp";

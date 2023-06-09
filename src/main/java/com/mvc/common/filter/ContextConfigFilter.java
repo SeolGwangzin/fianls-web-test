@@ -18,7 +18,6 @@ public class ContextConfigFilter implements Filter {
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
-        /* DB 접속 설정 정보 파일의 경로 정보가 비어있는 경우 초기화 해준다. */
         if(ConfigLocation.CONNECTION_CONFIG_LOCATION == null) {
             String root = request.getServletContext().getRealPath("/");
             String connectionInfoPath = request.getServletContext().getInitParameter("connection-info");
@@ -35,7 +34,6 @@ public class ContextConfigFilter implements Filter {
             ConfigLocation.MAPPER_LOCATION = root + "/" + mapperLocation;
         }
 
-        /* 경로를 static에 저장하면 템플릿에서도 사용이 가능하다. */
         chain.doFilter(request, response);
     }
 
