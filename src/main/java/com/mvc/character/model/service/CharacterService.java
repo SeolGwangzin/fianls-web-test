@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.util.List;
 
 import static com.mvc.common.Template.getSqlSession;
-import static com.mvc.common.jdbc.JDBCTemplate.*;
 
 public class CharacterService {
 

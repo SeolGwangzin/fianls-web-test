@@ -21,7 +21,7 @@ public class InsertCharacterServlet extends HttpServlet {
         String ageInfo = request.getParameter("ageInfo");
         String statureInfo = request.getParameter("statureInfo");
         String jobInfo = request.getParameter("jobInfo");
-        String positionInfo = request.getParameter("positionInfo");
+        String positionCode = request.getParameter("positionCode");
         String genderStatus = request.getParameter("genderStatus");
 
         CharacterService chaService = new CharacterService();
@@ -34,7 +34,7 @@ public class InsertCharacterServlet extends HttpServlet {
         character.setAgeInfo(ageInfo);
         character.setStatureInfo(statureInfo);
         character.setJobInfo(jobInfo);
-        character.setPositionInfo(positionInfo);
+        character.setPositionCode(positionCode);
         character.setGenderStatus(genderStatus);
 
         System.out.println("insert request character : " + newChaCode );

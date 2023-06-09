@@ -11,7 +11,7 @@
     나이 : ${ requestScope.selectedCha.ageInfo }<br>
     키(cm) : ${ requestScope.selectedCha.statureInfo }<br>
     직업 : ${ requestScope.selectedCha.jobInfo }<br>
-    포지션 : ${ requestScope.selectedCha.positionInfo }<br>
+    포지션 : ${ requestScope.selectedCha.positionCode }<br>
     성별 : ${ requestScope.selectedCha.genderStatus }<br>
 </body>
 </html>

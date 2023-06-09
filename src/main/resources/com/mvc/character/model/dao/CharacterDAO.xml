@@ -8,8 +8,11 @@
         <result property="ageInfo" column="AGE_INFO"/>
         <result property="statureInfo" column="STATURE_INFO"/>
         <result property="jobInfo" column="JOB_INFO"/>
-        <result property="positionInfo" column="POSITION_INFO"/>
+        <result property="positionCode" column="POSITION_CODE"/>
         <result property="genderStatus" column="GENDER_STATUS"/>
+        <result property="positionName" column="POSITION_NAME"/>
+        <result property="useYN" column="USE_YN"/>
+
     </resultMap>
 
     <select id="selectAllCharacterList" resultMap="characterResultMap">
@@ -26,8 +29,8 @@
     </select>
 
     <insert id="insertCharacter" parameterType="CharacterDTO">
-        INSERT INTO MEMBER_INFO (CHARACTER_NAME, AGE_INFO, STATURE_INFO, JOB_INFO, POSITION_INFO, GENDER_STATUS)
-        VALUES( #{characterName}, #{ageInfo}, #{statureInfo} , #{jobInfo}, #{positionInfo}, #{genderStatus})
+        INSERT INTO MEMBER_INFO (CHARACTER_NAME, AGE_INFO, STATURE_INFO, JOB_INFO, POSITION_CODE, GENDER_STATUS)
+        VALUES( #{characterName}, #{ageInfo}, #{statureInfo} , #{jobInfo}, #{positionCode}, #{genderStatus})
     </insert>
 
     <select id="selectNewChaCode" resultType="String">
@@ -47,8 +50,8 @@
             <if test="jobInfo != null and jobInfo">
                 ,JOB_INFO = #{jobInfo}
             </if>
-            <if test="positionInfo != null and positionInfo">
-                ,POSITION_INFO = #{positionInfo}
+            <if test="positionInfo != null and positionCode">
+                ,POSITION_CODE = #{positionCode}
             </if>
             <if test="genderStatus != null and genderStatus">
                 ,GENDER_STATUS = #{genderStatus}

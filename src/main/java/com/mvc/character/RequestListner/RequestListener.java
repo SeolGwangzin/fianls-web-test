@@ -7,9 +7,9 @@ import javax.servlet.ServletRequestListener;
 import javax.servlet.annotation.WebListener;
 
 @WebListener
-public class RequestListenerTest implements ServletRequestListener, ServletRequestAttributeListener {
+public class RequestListener implements ServletRequestListener, ServletRequestAttributeListener {
 
-    public RequestListenerTest() {
+    public RequestListener() {
         System.out.println("request listener 인스턴스 생성~~!!!!");
     }
 

@@ -21,7 +21,7 @@ public class UpdateEmpServlet extends HttpServlet {
         String ageInfo = request.getParameter("ageInfo");
         String statureInfo = request.getParameter("statureInfo");
         String jobInfo = request.getParameter("jobInfo");
-        String positionInfo = request.getParameter("positionInfo");
+        String positionCode = request.getParameter("positionCode");
         String genderStatus = request.getParameter("genderStatus");
 
         CharacterDTO character = new CharacterDTO();
@@ -29,7 +29,7 @@ public class UpdateEmpServlet extends HttpServlet {
         character.setAgeInfo(ageInfo);
         character.setStatureInfo(statureInfo);
         character.setJobInfo(jobInfo);
-        character.setPositionInfo(positionInfo);
+        character.setPositionCode(positionCode);
         character.setGenderStatus(genderStatus);
 
         int result = new CharacterService().updateCharacter(character);

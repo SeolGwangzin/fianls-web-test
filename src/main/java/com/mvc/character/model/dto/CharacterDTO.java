@@ -7,19 +7,19 @@ public class CharacterDTO implements java.io.Serializable {
     private String ageInfo;
     private String statureInfo;
     private String jobInfo;
-    private String positionInfo;
+    private String positionCode;
     private String genderStatus;
 
     public CharacterDTO() {
     }
 
-    public CharacterDTO(String characterCode, String characterName, String ageInfo, String statureInfo, String jobInfo, String positionInfo, String genderStatus) {
+    public CharacterDTO(String characterCode, String characterName, String ageInfo, String statureInfo, String jobInfo, String positionCode, String genderStatus) {
         this.characterCode = characterCode;
         this.characterName = characterName;
         this.ageInfo = ageInfo;
         this.statureInfo = statureInfo;
         this.jobInfo = jobInfo;
-        this.positionInfo = positionInfo;
+        this.positionCode = positionCode;
         this.genderStatus = genderStatus;
     }
 
@@ -31,7 +31,7 @@ public class CharacterDTO implements java.io.Serializable {
                 ", ageInfo='" + ageInfo + '\'' +
                 ", statureInfo='" + statureInfo + '\'' +
                 ", jobInfo='" + jobInfo + '\'' +
-                ", positionInfo='" + positionInfo + '\'' +
+                ", positionCode='" + positionCode + '\'' +
                 ", genderStatus='" + genderStatus + '\'' +
                 '}';
     }
@@ -76,12 +76,12 @@ public class CharacterDTO implements java.io.Serializable {
         this.jobInfo = jobInfo;
     }
 
-    public String getPositionInfo() {
-        return positionInfo;
+    public String getPositionCode() {
+        return positionCode;
     }
 
-    public void setPositionInfo(String positionInfo) {
-        this.positionInfo = positionInfo;
+    public void setPositionCode(String positionCode) {
+        this.positionCode = positionCode;
     }
 
     public String getGenderStatus() {

@@ -23,7 +23,7 @@
                 <td>${ cha.ageInfo }</td>
                 <td>${ cha.statureInfo }</td>
                 <td>${ cha.jobInfo }</td>
-                <td>${ cha.positionInfo }</td>
+                <td>${ cha.positionCode }</td>
                 <td>${ cha.genderStatus }</td>
             </tr>
         </c:forEach>

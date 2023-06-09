@@ -24,13 +24,13 @@
         키(cm) : <input type="text" name="statureInfo"><br>
         직업 : <input type="text" name="jobInfo"><br>
         포지션 :
-        <select name="positionInfo">
-            <option value="주인공">주인공</option>
-            <option value="히로인">히로인</option>
-            <option value="일반동료">일반동료</option>
-            <option value="배신자">배신자</option>
-            <option value="라이벌">라이벌</option>
-            <option value="적">적</option>
+        <select name="positionCode">
+            <option value="1">주인공</option>
+            <option value="2">히로인</option>
+            <option value="3">일반동료</option>
+            <option value="4">배신자</option>
+            <option value="5">라이벌</option>
+            <option value="6">적</option>
 
         </select>
         <br>
@@ -51,13 +51,13 @@
         키(cm) : <input type="text" name="statureInfo"><br>
         직업 : <input type="text" name="jobInfo"><br>
         포지션 :
-        <select name="positionInfo">
-            <option value="주인공">주인공</option>
-            <option value="히로인">히로인</option>
-            <option value="일반동료">일반동료</option>
-            <option value="배신자">배신자</option>
-            <option value="라이벌">라이벌</option>
-            <option value="적">적</option>
+        <select name="positionCode">
+            <option value="1">주인공</option>
+            <option value="2">히로인</option>
+            <option value="3">일반동료</option>
+            <option value="4">배신자</option>
+            <option value="5">라이벌</option>
+            <option value="6">적</option>
 
         </select>
         <br>
